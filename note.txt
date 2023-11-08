@@ -1,0 +1,45 @@
+<Modal visible={isShowForm}
+        animationType='slide'
+      >
+        <View style={styles.modalCss}>
+          {/* text input----- */}
+          <TextInput style={styles.textIpCss}
+            placeholder="Name"
+            value={name}
+            onChangeText={(text) => setName(text)}
+          />
+          <TextInput style={styles.textIpCss}
+            placeholder="Adress"
+            value={adress}
+            onChangeText={(text) => setAdress(text)}
+          />
+
+          <TextInput style={styles.textIpCss}
+            placeholder="phone number"
+            value={phoneNumber}
+            onChangeText={(text) => setPhoneNumber(text)}
+          />
+          <TextInput style={styles.textIpCss}
+            placeholder="Status"
+            value={status}
+            onChangeText={(text) => setStatus(text)}
+          />
+          {/* btn----- */}
+          <View style={styles.viewBtn}>
+            <Pressable
+              style={styles.btnCss}
+              onPress={() => { onSave(); }}
+            >
+              <Text style={styles.textCss}> Save</Text>
+            </Pressable>
+            <Pressable
+              style={styles.btnCss}
+              onPress={() => nav.navigate(
+                'Home'
+              )}
+            >
+              <Text style={styles.textCss}> Cancel</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
